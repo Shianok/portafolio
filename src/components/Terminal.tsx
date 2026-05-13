@@ -47,17 +47,20 @@ function renderOutput(output: CommandOutput, base: string, onClose: () => void, 
       </div>
     );
   }
-  // text
-  const colorMap: Record<string, string> = {
-    green:   'text-green-neon',
-    amber:   'text-amber',
-    dim:     'text-gray-light',
-    blue:    'text-blue-term',
-    error:   'text-red-term',
-    success: 'text-green-neon font-bold',
-  };
-  const cls = output.color ? colorMap[output.color] ?? 'text-green-neon' : 'text-green-neon';
-  return <div className={`text-sm ${cls} whitespace-pre-wrap`}>{output.text ?? '\u00a0'}</div>;
+  // text (type: 'text')
+  if (output.type === 'text') {
+    const colorMap: Record<string, string> = {
+      green:   'text-green-neon',
+      amber:   'text-amber',
+      dim:     'text-gray-light',
+      blue:    'text-blue-term',
+      error:   'text-red-term',
+      success: 'text-green-neon font-bold',
+    };
+    const cls = output.color ? colorMap[output.color] ?? 'text-green-neon' : 'text-green-neon';
+    return <div className={`text-sm ${cls} whitespace-pre-wrap`}>{output.content || '\u00a0'}</div>;
+  }
+  return <div className="text-sm text-green-neon/20">&nbsp;</div>;
 }
 
 export default function Terminal({ base }: TerminalProps) {
