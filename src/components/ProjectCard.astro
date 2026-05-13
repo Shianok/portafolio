@@ -1,0 +1,58 @@
+---
+import type { Project } from '../data/projects';
+
+export interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="glass-card border border-white/5 hover:border-neon-magenta/50 transition-all-300 overflow-hidden group">
+  <div class="p-6 h-full flex flex-col">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-2xl font-bold text-white group-hover:text-neon-magenta transition-colors">
+        {project.name}
+      </h3>
+      {project.status === 'active' && (
+        <span class="px-2 py-1 bg-green-500/10 text-green-400 text-[10px] font-mono uppercase border border-green-500/20">
+          Active
+        </span>
+      )}
+      {project.status === 'completed' && (
+        <span class="px-2 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-mono uppercase border border-blue-500/20">
+          Completed
+        </span>
+      )}
+    </div>
+    
+    <p class="text-neon-cyan text-sm mb-4 font-medium">{project.tagline}</p>
+    
+    <div class="text-gray-400 text-sm mb-6 flex-grow space-y-2">
+      {project.description.map((p) => (
+        <p>{p}</p>
+      ))}
+    </div>
+    
+    <div class="flex flex-wrap gap-2 mt-auto mb-6">
+      {project.tech.map((t) => (
+        <span class="text-xs px-2 py-1 bg-white/5 text-gray-300 font-mono border border-white/10 rounded-sm">
+          {t}
+        </span>
+      ))}
+    </div>
+    
+    <div class="flex gap-4 border-t border-white/10 pt-4">
+      {project.repo && (
+        <a href={project.repo} target="_blank" rel="noopener noreferrer" class="text-sm font-mono text-gray-400 hover:text-white flex items-center gap-2">
+          &lt;Code /&gt;
+        </a>
+      )}
+      {project.demo && (
+        <a href={project.demo} target="_blank" rel="noopener noreferrer" class="text-sm font-mono text-neon-magenta hover:text-neon-cyan flex items-center gap-2 transition-colors">
+          Live Demo -&gt;
+        </a>
+      )}
+    </div>
+  </div>
+</div>

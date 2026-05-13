@@ -1,0 +1,29 @@
+---
+const base = import.meta.env.BASE_URL;
+
+const links = [
+  { name: '_HOME', url: `${base}#home` },
+  { name: '_ABOUT', url: `${base}#about` },
+  { name: '_PROJECTS', url: `${base}#projects` },
+];
+---
+<nav class="w-full py-6 flex items-center justify-between z-50 relative border-b border-white/5">
+  <div class="flex items-center gap-1">
+    <span class="text-2xl font-bold tracking-wider text-neon-cyan">NEO</span>
+    <span class="text-2xl font-bold tracking-wider text-neon-magenta">DEV</span>
+  </div>
+  
+  <ul class="hidden md:flex items-center gap-8">
+    {links.map(link => (
+      <li>
+        <a href={link.url} class="text-sm font-mono text-gray-400 hover:text-white transition-colors duration-300">
+          {link.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+  
+  <a href={`${base}#contact`} class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-[#ff00ff]/50 text-[#ff00ff] text-xs font-mono font-bold tracking-widest uppercase hover:bg-[#ff00ff]/10 transition-all-300">
+    _CONTACT
+  </a>
+</nav>
