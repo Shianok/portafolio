@@ -1,0 +1,63 @@
+---
+const expertise = [
+  {
+    title: "Backend Development",
+    desc: "Diseño de APIs robustas usando Clean Architecture y CQRS. Gestión de bases de datos relacionales y rendimiento optimizado.",
+    tech: ".NET 8, C#, Django, SQL Server",
+    color: "bg-[#00f2ff]",
+  },
+  {
+    title: "Frontend Development",
+    desc: "Creación de interfaces modernas, reactivas y altamente optimizadas con un enfoque en la experiencia de usuario y el diseño.",
+    tech: "React, Astro, Tailwind CSS, TypeScript",
+    color: "bg-[#a855f7]",
+  },
+  {
+    title: "Automatización & RPA",
+    desc: "Desarrollo de bots y flujos de trabajo automatizados para optimizar procesos empresariales y reducir el trabajo repetitivo.",
+    tech: "Power Automate, Robocorp, Python",
+    color: "bg-[#f59e0b]",
+  },
+  {
+    title: "Arquitectura Cloud",
+    desc: "Despliegue y configuración de servicios en la nube, integración continua y contenedores para aplicaciones modernas.",
+    tech: "Docker, CI/CD, Azure Fundamentals",
+    color: "bg-[#10b981]",
+  },
+];
+---
+
+<section id="expertise" class="py-16 md:py-24">
+  <div class="mb-12 md:mb-16">
+    <h2 class="text-3xl md:text-5xl font-bold font-display text-white mb-2">
+      My Expertise
+    </h2>
+    <br />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      expertise.map((item, index) => (
+        <div class="bg-[#0b0d17] border border-white/5 p-8 md:p-10 hover:bg-[#112240]/50 transition-colors duration-500 group relative overflow-hidden rounded-sm">
+          <br />
+          <div
+            class={`absolute top-0 left-0 w-full h-[2px] ${item.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
+          />
+
+          <div class="text-[#8892b0] font-mono text-sm mb-4">0{index + 1}.</div>
+          <h3 class="text-xl md:text-2xl font-bold font-display text-white mb-4 group-hover:text-[#00f2ff] transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-[#8892b0] text-sm md:text-base font-sans leading-relaxed mb-6">
+            {item.desc}
+          </p>
+          <br />
+          <p class="text-xs md:text-sm text-gray-500 font-mono">
+            <span class="text-white/30">Stack //</span> {item.tech}
+          </p>
+          <br />
+        </div>
+      ))
+    }
+  </div>
+</section>

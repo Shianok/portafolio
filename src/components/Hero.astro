@@ -1,74 +1,61 @@
 ---
 const base = import.meta.env.BASE_URL;
 ---
-<section id="home" class="min-h-[85vh] flex flex-col lg:flex-row items-center justify-between py-12 lg:py-0 gap-12">
-  <div class="flex-1 flex flex-col items-start gap-6">
-    <div class="inline-flex items-center px-3 py-1 border border-gray-700 rounded-full bg-gray-900/50">
-      <span class="text-xs font-mono text-neon-cyan uppercase tracking-widest">FULL STACK DEVELOPER</span>
-    </div>
-    
-    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-      <span class="text-white">Crafting Code</span><br/>
-      <span class="text-neon-cyan">That Connects</span><br/>
-      <span class="text-neon-magenta">The World</span>
-    </h1>
-    
-    <p class="text-gray-400 text-lg max-w-xl">
-      Transformando visiones en experiencias web inmersivas con tecnología de vanguardia y diseño limpio. Especialista en .NET, React, Astro y arquitecturas escalables.
+
+<section
+  id="home"
+  class="min-h-[75vh] flex flex-col justify-center items-start py-12 md:py-0"
+>
+  <div class="w-full">
+    <p class="text-[#00f2ff] font-mono mb-4 text-xs md:text-sm tracking-widest">
+      // HELLO THERE, I AM
     </p>
-    
-    <div class="flex flex-wrap items-center gap-6 mt-4">
-      <a href="#contact" class="px-6 py-3 bg-[#ff00ff] text-white font-bold tracking-wide hover:bg-[#ff00ff]/80 transition-all-300 text-sm uppercase">
-        Iniciar Contacto
-      </a>
-      <a href="#projects" class="px-6 py-3 border border-neon-cyan text-neon-cyan font-bold tracking-wide hover:bg-neon-cyan hover:text-black transition-all-300 text-sm uppercase">
-        Ver Proyectos
-      </a>
+    <h1
+      class="text-5xl sm:text-7xl md:text-8xl lg:text-[5rem] font-extrabold font-display leading-[1.1] md:leading-[0.9] tracking-tight mb-6 break-words"
+    >
+      OSCAR<br />
+      <span class="text-[#8892b0]">ARCE</span>
+    </h1>
+
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+      <div class="hidden sm:block h-[1px] w-12 bg-[#a855f7]"></div>
+      <p
+        class="text-[#a855f7] font-semibold tracking-widest uppercase text-xs md:text-sm"
+      >
+        Web & Software Developer
+      </p>
     </div>
-  </div>
 
-  <div class="flex-1 w-full max-w-lg lg:max-w-xl relative hidden md:block">
-    <div class="glass-card box-neon-cyan p-6 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/10 rounded-full blur-3xl group-hover:bg-neon-cyan/20 transition-all duration-700"></div>
-      
-      <div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
-        <div class="flex gap-2">
-          <div class="w-3 h-3 rounded-full bg-red-500"></div>
-          <div class="w-3 h-3 rounded-full bg-amber-500"></div>
-          <div class="w-3 h-3 rounded-full bg-green-500"></div>
-        </div>
-        <div class="text-xs font-mono text-gray-500">profile.ts</div>
-      </div>
-      
-      <pre class="font-mono text-sm leading-relaxed overflow-x-auto"><code class="text-gray-300">
-<span class="text-blue-400">const</span> <span class="text-yellow-200">developer</span> = <span class="text-purple-400">await</span> <span class="text-blue-300">Database</span>.<span class="text-yellow-200">findOne</span>({
-  <span class="text-blue-400">name:</span> <span class="text-green-300">'Oscar Arce Ugalde'</span>,
-  <span class="text-blue-400">role:</span> <span class="text-green-300">'Full Stack Developer'</span>
-});
+    <br />
+    <p
+      class="text-[#8892b0] text-base md:text-lg max-w-2xl font-sans leading-relaxed mb-10 md:mb-12"
+    >
+      Construyendo aplicaciones empresariales robustas y experiencias digitales
+      cautivadoras. Especializado en arquitecturas escalables con <strong
+        >.NET 8</strong
+      >, interfaces interactivas con <strong>React & Astro</strong>, y
+      automatización con <strong>Python</strong>.
+    </p>
+    <br />
 
-<span class="text-blue-400">const</span> <span class="text-yellow-200">skills</span> = [
-  <span class="text-green-300">'.NET 8'</span>, <span class="text-green-300">'C#'</span>, <span class="text-green-300">'Astro'</span>, 
-  <span class="text-green-300">'React'</span>, <span class="text-green-300">'Python'</span>, <span class="text-green-300">'SQL'</span>
-];
-
-<span class="text-gray-500">// System ready...</span>
-<span class="text-purple-400">return</span> <span class="text-yellow-200">developer</span>.<span class="text-blue-300">deploy</span>({ <span class="text-yellow-200">skills</span> });
-      </code></pre>
-      
-      <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-4">
-        <div class="flex items-center gap-4">
-          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-neon-cyan to-neon-magenta flex items-center justify-center text-white font-bold">
-            OA
-          </div>
-          <div>
-            <h3 class="text-sm font-bold text-white uppercase">Oscar Arce</h3>
-            <p class="text-xs text-neon-cyan">Senior Web Architect</p>
-          </div>
-        </div>
-        <div class="flex gap-2">
-           <span class="text-[10px] text-gray-500 font-mono">React | .NET | Node</span>
-        </div>
-      </div>
-    </div>
+    <a
+      href="#projects"
+      class="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#ccd6f6] text-[#0b0d17] text-sm md:text-base font-bold tracking-wide hover:bg-[#00f2ff] transition-colors duration-300 font-display w-full sm:w-auto justify-center"
+    >
+      EXPLORE PROJECTS
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+          points="12 5 19 12 12 19"></polyline></svg
+      >
+    </a>
   </div>
 </section>
