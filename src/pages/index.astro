@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TerminalHeader from '../components/TerminalHeader.astro';
+import Terminal from '../components/Terminal';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout>
+  <TerminalHeader />
+  <main>
+    <Terminal base={base} client:load />
+  </main>
+</Layout>

@@ -1,0 +1,48 @@
+---
+// Static header bar — session / status / location
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-green-neon/20 bg-terminal-bg/95 backdrop-blur-sm">
+  <div class="px-4 py-2 flex items-center justify-between text-xs">
+    <!-- Left: session info -->
+    <div class="flex items-center gap-4 text-green-neon">
+      <span class="text-gray-term">┌─[</span>
+      <span>
+        <span class="text-gray-light">session:</span>
+        <span class="text-green-neon text-glow font-bold">oarce_dev</span>
+      </span>
+      <span class="text-gray-term">|</span>
+      <span class="flex items-center gap-1">
+        <span class="text-gray-light">status:</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-neon shadow-[0_0_6px_#00ff41] animate-pulse"></span>
+        <span class="text-green-neon">online</span>
+      </span>
+      <span class="text-gray-term">|</span>
+      <span>
+        <span class="text-gray-light">location:</span>
+        <span class="text-amber">costa_rica</span>
+      </span>
+      <span class="text-gray-term">]</span>
+    </div>
+
+    <!-- Right: time -->
+    <div class="text-gray-light hidden md:flex items-center gap-2">
+      <span id="header-time" class="tabular-nums"></span>
+      <script>
+        function updateTime() {
+          const el = document.getElementById('header-time');
+          if (el) {
+            const now = new Date();
+            el.textContent = now.toLocaleTimeString('es-CR', { hour12: false });
+          }
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+      </script>
+      <span class="text-gray-term">UTC-6</span>
+    </div>
+  </div>
+
+  <!-- Bottom divider line -->
+  <div class="h-px bg-gradient-to-r from-transparent via-green-neon/40 to-transparent"></div>
+</header>
