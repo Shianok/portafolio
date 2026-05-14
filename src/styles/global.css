@@ -6,7 +6,7 @@
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Syne', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  
+
   --color-ts-bg: #0b0d17;
   --color-ts-cyan: #00f2ff;
   --color-ts-magenta: #a855f7;
@@ -18,10 +18,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 4;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: var(--color-ts-bg);
   color: var(--color-ts-gray);
@@ -29,7 +30,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   color: var(--color-ts-light);
 }
@@ -38,13 +44,16 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-ts-bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #233554;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-ts-cyan);
 }

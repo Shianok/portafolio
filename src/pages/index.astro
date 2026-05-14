@@ -8,22 +8,26 @@ import { projects } from "../data/projects";
 
 <Layout
   title="Oscar Arce | Web & Software Developer"
-  description="Portfolio de Oscar Arce Ugalde, Developer."
+  description="Portfolio of Oscar Arce Ugalde, Developer."
 >
   <main>
+    <br />
+    <br />
+    <br />
+    <br />
     <Hero />
+    <br />
+    <br />
     <Expertise />
-    <br />
-    <br />
     <section id="projects" class="py-24">
       <div class="mb-16 flex items-center gap-4">
         <h2 class="text-3xl md:text-5xl font-bold font-display text-white">
           Some Things I've Built
         </h2>
-        <div class="flex-grow h-[1px] bg-white/10 ml-4 max-w-xs"></div>
+        <div class="flex-grow h-[0px] bg-white/10 ml-4 max-w-xs"></div>
       </div>
       <br />
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </section>
