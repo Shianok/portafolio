@@ -60,48 +60,6 @@ npm run dev
 
 ---
 
-## ➕ Adding a New Project
-
-Edit `src/data/projects.ts` and add a new object to the `projects` array:
-
-```typescript
-{
-  id: 'my_project_id',
-  name: 'Project Name',
-  tagline: 'Short description or subtitle',
-  description: [
-    'Detailed description line 1',
-    'Detailed description line 2...',
-  ],
-  tech: ['React', '.NET 8', 'SQL Server'],
-  status: 'active', // 'active' | 'completed' | 'WIP'
-  featured: true,
-  repo: 'https://github.com/Shianok/my_project', // optional
-  demo: 'https://demo.example.com',              // optional
-}
-```
-
-The new project will automatically render in the "Projects" section of the site.
-
----
-
-## 📦 Deployment to GitHub Pages
-
-Deployment is **automated** via GitHub Actions:
-
-```text
-push to main → build → deploy → https://shianok.github.io/portafolio/
-```
-
-### Manual Deployment via Git
-```bash
-git add .
-git commit -m "feat: your description"
-git push origin main
-```
-
----
-
 ## 📄 License
 
 MIT © Oscar Arce Ugalde
